@@ -2,7 +2,7 @@
 
 A better async queue using promises.
 
-[![Build Status](https://travis-ci.org/Moeriki/qute.svg?branch=master)](https://travis-ci.org/Moeriki/qute) [![Coverage Status](https://coveralls.io/repos/github/Moeriki/qute/badge.svg?branch=master)](https://coveralls.io/github/Moeriki/qute?branch=master) [![Known Vulnerabilities](https://snyk.io/test/github/moeriki/qute/badge.svg)](https://snyk.io/test/github/moeriki/qute) [![dependencies Status](https://david-dm.org/moeriki/qute/status.svg)](https://david-dm.org/moeriki/qute) [![Downloads](http://img.shields.io/npm/dm/qute.svg?style=flat)](https://www.npmjs.org/package/qute)
+[![Build Status](https://travis-ci.org/Moeriki/node-qute.svg?branch=master)](https://travis-ci.org/Moeriki/node-qute) [![Coverage Status](https://coveralls.io/repos/github/Moeriki/node-qute/badge.svg?branch=master)](https://coveralls.io/github/Moeriki/node-qute?branch=master) [![Known Vulnerabilities](https://snyk.io/test/github/moeriki/node-qute/badge.svg)](https://snyk.io/test/github/moeriki/node-qute) [![dependencies Status](https://david-dm.org/moeriki/node-qute/status.svg)](https://david-dm.org/moeriki/node-qute) [![Downloads](http://img.shields.io/npm/dm/node-qute.svg?style=flat)](https://www.npmjs.org/package/qute)
 
 ## Install
 
