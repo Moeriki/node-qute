@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "babel-jest": "^16.0.0",
+    "babel-polyfill": "^6.16.0",
     "babel-preset-latest": "^6.16.0",
     "coveralls": "^2.11.14",
     "delay": "^1.3.1",
