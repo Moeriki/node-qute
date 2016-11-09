@@ -162,7 +162,7 @@ it('should expose size', async () => {
   const defer3 = deferred();
   queue.push(defer1, defer2, defer3);
   await delay(TIMEOUT);
-  expect(queue.size()).toBe(3);
+  expect(queue.size()).toBe(3); // eslint-disable-line no-magic-numbers
   expect(queue.sizePending()).toBe(1);
   expect(queue.sizeQueued()).toBe(2);
   defer1.resolve();

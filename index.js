@@ -89,48 +89,34 @@ function qute(options) {
 
   // exposed
 
-  function push() {
-    const handlers = Array.prototype.slice.apply(arguments);
-    return add(handlers);
-  }
-
-  function pause() {
-    isPaused = true;
-    return queueInstance;
-  }
-
-  function resume() {
-    isPaused = false;
-    tryToRunNext();
-    return queueInstance;
-  }
-
-  function size() {
-    return queuedItems.length + pendingCount;
-  }
-
-  function sizePending() {
-    return pendingCount;
-  }
-
-  function sizeQueued() {
-    return queuedItems.length;
-  }
-
-  function unshift() {
-    const handlers = Array.prototype.slice.apply(arguments);
-    return add(handlers, true);
-  }
-
   return (
     queueInstance = {
-      push,
-      pause,
-      resume,
-      size,
-      sizePending,
-      sizeQueued,
-      unshift,
+      push() {
+        const handlers = Array.prototype.slice.apply(arguments);
+        return add(handlers);
+      },
+      pause() {
+        isPaused = true;
+        return queueInstance;
+      },
+      resume() {
+        isPaused = false;
+        tryToRunNext();
+        return queueInstance;
+      },
+      size() {
+        return queuedItems.length + pendingCount;
+      },
+      sizePending() {
+        return pendingCount;
+      },
+      sizeQueued() {
+        return queuedItems.length;
+      },
+      unshift() {
+        const handlers = Array.prototype.slice.apply(arguments);
+        return add(handlers, true);
+      },
     }
   );
 }
