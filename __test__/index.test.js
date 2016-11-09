@@ -36,6 +36,13 @@ it('should queue one item', async () => {
   await result;
 });
 
+it('should throw when queueing non-functions', () => {
+  const queue = qute();
+  expect(() => queue.push(null)).toThrow();
+  expect(() => queue.push(1)).toThrow();
+  expect(() => queue.push('str')).toThrow();
+});
+
 it('should queue some items', async () => {
   const queue = qute();
   const defer1 = deferred();
