@@ -13,6 +13,7 @@ const utils = require('./__utils__');
 const WAITING = utils.WAITING;
 const RUNNING = utils.RUNNING;
 const RESOLVED = utils.RESOLVED;
+const REJECTED = utils.REJECTED;
 const deferred = utils.deferred;
 
 // private variables
@@ -107,24 +108,24 @@ it('should respect concurrency', async () => {
   const defer1 = deferred();
   const defer2 = deferred();
   const defer3 = deferred();
-  const result = queue.push(defer1, defer2, defer3);
+  const result = queue.push(defer1, defer2, defer3).catch(() => { /* ok to swallow */ });
   await delay(TIMEOUT);
   expect(defer1.status).toBe(RUNNING);
   expect(defer2.status).toBe(RUNNING);
   expect(defer3.status).toBe(WAITING);
-  defer1.resolve();
+  defer1.reject();
   await delay(TIMEOUT);
-  expect(defer1.status).toBe(RESOLVED);
+  expect(defer1.status).toBe(REJECTED);
   expect(defer2.status).toBe(RUNNING);
   expect(defer3.status).toBe(RUNNING);
   defer2.resolve();
   await delay(TIMEOUT);
-  expect(defer1.status).toBe(RESOLVED);
+  expect(defer1.status).toBe(REJECTED);
   expect(defer2.status).toBe(RESOLVED);
   expect(defer3.status).toBe(RUNNING);
   defer3.resolve();
   await delay(TIMEOUT);
-  expect(defer1.status).toBe(RESOLVED);
+  expect(defer1.status).toBe(REJECTED);
   expect(defer2.status).toBe(RESOLVED);
   expect(defer3.status).toBe(RESOLVED);
   await result;

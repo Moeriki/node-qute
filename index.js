@@ -78,10 +78,12 @@ function qute(options) {
       .then((result) => {
         pendingCount--;
         item.resolve(result);
-        defer(tryToRunNext);
       }, (err) => {
         pendingCount--;
         item.reject(err);
+      })
+      .then(() => {
+        defer(tryToRunNext);
       });
 
     defer(tryToRunNext);
