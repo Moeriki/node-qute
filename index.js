@@ -21,8 +21,6 @@ function qute(options) {
   options.maxConcurrency = options.maxConcurrency == null ? DEFAULT_MAX_CONCURRENCY : options.maxConcurrency;
   options.paused = options.paused == null ? false : options.paused;
 
-  // TODO options.retries = 1
-
   const queuedItems = [
   // {
   //   handler:Function,
