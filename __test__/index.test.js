@@ -43,6 +43,16 @@ it('should throw when queueing non-functions', () => {
   expect(() => queue.push('str')).toThrow();
 });
 
+it('should resolve non Promises', async () => {
+  const queue = qute();
+  const values = await queue.push(
+    () => undefined,
+    () => 1,
+    () => 'str',
+  );
+  expect(values).toEqual([undefined, 1, 'str']);
+});
+
 it('should queue some items', async () => {
   const queue = qute();
   const defer1 = deferred();

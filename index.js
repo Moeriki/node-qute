@@ -74,7 +74,7 @@ function qute(options) {
 
     pendingCount++;
     const item = queuedItems.shift();
-    item.handler()
+    Promise.resolve(item.handler())
       .then((result) => {
         pendingCount--;
         item.resolve(result);
