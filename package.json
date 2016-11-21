@@ -21,16 +21,16 @@
     "any-promise": "~1.3.0"
   },
   "devDependencies": {
-    "babel-jest": "~16.0.0",
+    "babel-jest": "~17.0.2",
     "babel-polyfill": "~6.16.0",
     "babel-preset-latest": "~6.16.0",
     "coveralls": "~2.11.14",
     "delay": "~1.3.1",
-    "eslint": "~3.9.1",
-    "eslint-config-muriki": "~6.3.4",
+    "eslint": "~3.10.2",
+    "eslint-config-muriki": "~7.0.0",
     "eslint-plugin-import": "~2.2.0",
-    "eslint-plugin-jasmine": "~2.0.1",
+    "eslint-plugin-jasmine": "~2.1.0",
     "eslint-plugin-node": "~3.0.3",
-    "jest": "~16.0.2"
+    "jest": "~17.0.3"
   }
 }
