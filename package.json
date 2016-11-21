@@ -9,6 +9,7 @@
   ],
   "author": "Dieter Luypaert <dieterluypaert@gmail.com>",
   "license": "MIT",
+  "repository": "git@github.com:Moeriki/node-qute.git",
   "main": "index.js",
   "scripts": {
     "lint": "eslint *.js __test__",
