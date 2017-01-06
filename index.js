@@ -60,7 +60,7 @@ function qute(options) {
 
     Array.prototype[atBeginning ? 'unshift' : 'push'].apply(queuedItems, newItems);
 
-    tryToRunNext();
+    defer(tryToRunNext);
 
     return newItems.length === 1
       ? newItems[0].promise

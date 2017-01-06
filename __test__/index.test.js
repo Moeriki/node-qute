@@ -88,6 +88,7 @@ it('should push and unshift', async () => {
   const defer2 = deferred();
   const defer3 = deferred();
   const result1 = queue.push(defer1, defer3);
+  await delay(TIMEOUT);
   const result2 = queue.unshift(defer2);
   await delay(TIMEOUT);
   expect(defer1.status).toBe(RUNNING);
