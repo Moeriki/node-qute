@@ -44,7 +44,7 @@ function qute(options) {
     const newItems = handlers.map((handler) => {
       let resolve, reject;
       if (typeof handler !== 'function') {
-        throw new Error('Qute::push/unshift expected a function, received ');
+        throw new Error(`Qute::push/unshift expected a function, received '${typeof handler}'`);
       }
       const promise = new Promise((_resolve, _reject) => {
         resolve = _resolve;
