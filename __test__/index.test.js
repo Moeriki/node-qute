@@ -162,7 +162,7 @@ it('should expose size', async () => {
   const defer1 = deferred();
   const defer2 = deferred();
   const defer3 = deferred();
-  queue.push(defer1, defer2, defer3).catch(() => { /* ok to swallow */ });
+  const result = queue.push(defer1, defer2, defer3).catch(() => { /* ok to swallow */ });
   await delay(TIMEOUT);
   expect(queue.size()).toBe(3); // eslint-disable-line no-magic-numbers
   expect(queue.sizePending()).toBe(1);
@@ -182,4 +182,5 @@ it('should expose size', async () => {
   expect(queue.size()).toBe(0);
   expect(queue.sizePending()).toBe(0);
   expect(queue.sizeQueued()).toBe(0);
+  await result;
 });
