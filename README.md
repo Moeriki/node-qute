@@ -60,4 +60,4 @@ pause / resume starting new tasks
 
 ## any-promise
 
-Shifting uses [any promise](https://github.com/kevinbeaty/any-promise) to detect a Promise object. Check [their README](https://github.com/kevinbeaty/any-promise#any-promise) to plugin in your own Promise library.
+Qute uses [any promise](https://github.com/kevinbeaty/any-promise) to detect a Promise object. Check [their README](https://github.com/kevinbeaty/any-promise#any-promise) to plugin in your own Promise library.
