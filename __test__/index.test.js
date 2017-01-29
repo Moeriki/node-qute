@@ -8,13 +8,13 @@ const delay = require('delay');
 
 const qute = require('../index');
 
-const utils = require('./__utils__');
-
-const WAITING = utils.WAITING;
-const RUNNING = utils.RUNNING;
-const RESOLVED = utils.RESOLVED;
-const REJECTED = utils.REJECTED;
-const deferred = utils.deferred;
+const {
+  WAITING,
+  RUNNING,
+  RESOLVED,
+  REJECTED,
+  deferred,
+} = require('./__utils__');
 
 // private variables
 

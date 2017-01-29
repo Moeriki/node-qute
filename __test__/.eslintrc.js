@@ -1,7 +1,6 @@
 module.exports = {
   extends: [
-    'muriki/env/test',
+    'muriki/presets/jest',
     'muriki/es/2017',
-    'muriki/plugins/jasmine',
   ],
 };
